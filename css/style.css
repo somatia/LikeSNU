@@ -1,0 +1,627 @@
+/* webfont */
+@font-face {
+    font-family: 'pdl';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pdr';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pdb';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { vertical-align: top; object-fit: cover; }
+
+html { overflow-x: hidden; }
+body { font-size: 14px; font-family: 'pdr'; }
+.wrap { width: 1400px; margin: 0 auto; position: relative; }
+.swrap { width: 1320px; margin: 0 auto; position: relative; }
+.wrap:after, ul:after, .cl:after { content: ""; clear: both; display: block; }
+.fl { display: flex; align-items: center; justify-content: center; }
+.fld { flex-direction: column; }
+.fl:after { display: none; }
+.blind { font-size: 0; width: 0; height: 0; overflow: hidden; position: absolute; left: -9999px; }
+.blank { width: 100%; height: 147px; }
+.rela { position: relative; }
+
+
+/* header & footer */
+header { font-family: 'pdb'; position: fixed; background: #fff; width: 100%; z-index: 99; border-bottom: 1px solid #ddd; }
+header .wrap { width: 1820px; }
+header .snb { font-size: 15px; color: #555; height: 54px; text-align: right;}
+header .snb li { display: inline; line-height: 54px; margin-left: 28px; } /* float 대신 inline을 줘서 옆으로 나열되게 만듦. 그리고 text-align: right를 줘서 오른쪽 정렬을 해주고 너비는 100% 다 가져감. */
+header .snb li i { font-size: 24px; position: relative; top: 4px; }
+header .gnb { font-size: 20px; position: relative; padding: 20px 0; }
+header .gnb ul { position: absolute; left: 170px; bottom: 20px; }
+header .gnb ul li { float: left; margin: 0 30px; }
+header .gnb ul li.see { display: block; font-size: 14px; background: #fbce40; padding: 10px; border-radius: 8px; position: relative; top: -6px; }
+header .gnb ul li.see a { display: block; }
+header nav { font-size: 26px; text-align: right; position: absolute; right: 0; bottom: 20px; }
+header nav a { margin-left: 20px; }
+
+footer { padding: 50px 0 70px; background: #202020; color: #999; font-weight: 700; font-size: 15px; }
+footer .wrap>img { width: 240px; margin-bottom: 20px; }
+footer address { font-style: normal; line-height: 1.6; letter-spacing: 0.5px;}
+footer nav ul { margin-top: 20px; margin-bottom: 40px; }
+footer nav ul li { float: left; margin-right: 26px; }
+footer nav ul li:last-child { margin-right: 0; }
+footer p { font-size: 14px; color: #fff; font-weight: normal; }
+footer .wrap>ul { position: absolute; right: 0; bottom: 0; }
+footer .wrap>ul li { float: left; margin-left: 20px; }
+
+.sidebar { width: 100px; border: 2px solid #183989; box-sizing: border-box; border-radius: 6px; position: fixed; right: 10px; bottom: 100px; z-index: 10; background: #fff; }
+.sidebar p { width: 86px; height: 60px; border: 1px solid #8fcafd; box-sizing: border-box; text-align: center; margin: 0 auto; border-radius: 6px; word-break: keep-all; font-weight: bold; margin-top: 10px; }
+.sidebar .sideimg { margin: 20px 0 10px; }
+.sidebar .sideimg a { width: 70px; height: 70px; border-radius: 70px; border: 1px solid #ccc; box-sizing: border-box; }
+.sidebar .sideimg a:nth-child(2) { top: -10px; }
+.sidebar .sideimg a:nth-child(3) { top: -10px; }
+.sidebar .sideimg a img { width: 70px; height: 70px; border-radius: 70px; }
+.sidebar .aspan { margin: 10px; }
+.sidebar .aspan span { width: 26px; line-height: 20px; border-radius: 20px; background: #c70823; color: #fff; text-align: center; margin-right: 5px; }
+.sidebar .aspan a { font-size: 12px; color: #666; }
+.sidetop { width: 60px; height: 60px; background: #183889; position: fixed; right: 30px; bottom: 20px; z-index: 10; border-radius: 60px; color: #fff; }
+.sidetop i { font-style: normal; font-size: 10px; margin-bottom: 6px; }
+
+/* index */
+.tt strong { font-size: 16px; color: #0078fe; }
+.tt h3 { font-size: 40px; font-weight: normal; margin: 12px 0; }
+.tt h3 span { font-weight: 900; }
+.tt p { font-size: 16px; color: #666; line-height: 1.6; }
+.hg { color: #fff; background: #999; display: inline-block; padding: 10px; border-radius: 5px; margin-top: 10px; margin-right: 10px; transition: 0.3s;  }
+.hg:hover { background: #0078fe; }
+.ellipsis2 {
+    width: 270px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#main { background: url(../images/index_visual.png) no-repeat center/cover; height: 558px; font-family: 'pdb'; }
+#main article.ment { padding-top: 130px; margin-bottom: 130px; }
+#main article dl dt { font-size: 20px; color: #153aa6; }
+#main article dl dd { font-size: 44px; margin: 6px 0 26px 0; }
+#main article p { font-size: 16px; font-family: 'pdr'; line-height: 1.6; }
+#main article>ul { padding: 30px 0; }
+#main article>ul li { float: left; margin-right: 15px; }
+#main article>ul li a { display: inline-block; background: #fff; padding: 14px 14px; border-radius: 50px; }
+#main div>p { height: 4px; }
+#main div p.yl { width: 185px; background: #fbce40; position: absolute; }
+#main div p.wt { width: 370px; background: #fff; }
+#main div>ul { position: absolute; left: 400px; bottom: 200px; }
+#main div>ul li { float: left; }
+#main div>ul li a i { font-size: 24px; }
+
+#main .sch { position: relative; top: -10px; }
+#main .sch .wrap { background: #fff; border-radius: 20px; width: 1000px; height: 80px; box-shadow: 5px 5px 16px rgba(0,0,0,0.2); }
+#main .sch .wrap input { font-size: 18px; outline: none; font-weight: 600; color: #666; border: none; width: 100%; padding: 0 140px 0 20px; box-sizing: border-box; position: absolute; top: 30px; left: 0; }
+#main .sch .wrap .schic { position: absolute; right: 20px; top: 18px; }
+#main .sch .wrap .schic a { font-size: 40px; color: #0078fe; margin-left: 20px; }
+
+#com { padding-top: 70px; }
+#com .more { position: absolute; right: 0; top: 50px; }
+#com .com1 { position: relative; }
+#com .com2 { position: relative; }
+#com .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.3); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 132px; z-index: 2; }
+#com .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.3); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 132px; z-index: 2; }
+
+#com ul { margin-top: 50px; }
+#com ul li { float: left; width: 200px; margin-right: 40px; }
+#com ul li:last-child { margin-right: 0; }
+#com ul li h4 { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 30px; margin-bottom: 10px; }
+#com ul li a .frame { width: 200px; height: 300px; overflow: hidden; transition: 0.3s; }
+#com ul li a .frame img { width: 200px; height: 300px; object-fit: cover; transition: 0.3s; }
+#com ul li a .frame img:hover, #com ul li a .frame img:focus { scale: 1.05; }
+#com ul li a:hover h4, #com ul li a:focus h4 { text-decoration: underline; }
+
+#comp { background: url(../images/comp_bg.png) no-repeat center/cover; padding: 140px 0; }
+#comp .more { position: absolute; right: 0; top: 50px; }
+#comp ul { margin-top: 20px; }
+#comp ul li { width: 335px; height: 300px; border: 2px solid #0078fe; box-sizing: border-box; margin-right: 20px; border-radius: 30px; float: left; padding: 40px 32px 20px; background: #fff; position: relative; margin-top: 20px; top: 0; transition: 0.3s; } /* transition을 줘도 튄다 하면 초기점을 잡아주어야함. 이번엔 hover했을 때 top값을 움직였으므로 top값을 초기화해줘야함. */
+#comp ul li:hover { box-shadow: 2px 5px 15px rgba(0,0,0,0.2); position: relative; top: -8px; }
+#comp ul li:nth-child(4n) { margin-right: 0; }
+#comp ul li a:hover h3 { text-decoration: underline; text-decoration-color: #153a96; }
+#comp ul li a h3 { font-size: 20px; color: #153a96; margin-bottom: 30px; }
+#comp ul li a strong { font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#comp ul li a:hover strong { text-decoration: underline; text-decoration-color: #000; }
+#comp ul li a p { font-size: 13px; color: #666; margin-top: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#comp ul li a:hover p { text-decoration: underline; text-decoration-color: #666; }
+#comp .hgd { position: absolute; left: 32px; bottom: 30px; }
+#comp .hg { background: #0078fe; }
+#comp .hg:hover { background: #153a87; text-decoration: none; }
+
+
+
+.tdbox { background: #f6f7fb; border-radius: 30px; box-shadow: 1px 2px 10px rgba(0,0,0,0.1); padding-bottom: 30px; margin-top: 40px; position: relative; }
+.tdtt { font-size: 24px; color: #153a96; padding: 30px 0; }
+.tdtx { display: block; font-size: 16px; margin-bottom: 14px; }
+.tdwbox { position: relative; }
+
+#td { background: #eeeff8; padding: 90px 0; }
+#td h3 { font-size: 40px; font-weight: normal; margin: 12px 0; display: inline; }
+#td h3 span { font-weight: 900; }
+#td .wrap>p { display: inline; color: #666; font-size: 20px; }
+#td .rt ul li { width: 325px;  background: #fff; margin-right: 20px; border-radius: 20px; float: left; padding: 30px 20px; box-sizing: border-box; position: relative; }
+#td .rt ul li:first-child { margin-left: 20px; }
+#td .rt ul li img { height: 60px; }
+#td .rt ul li p { display: inline; font-size: 40px; font-weight: 900; color: #153a96; position: absolute; right: 20px; bottom: 30px; }
+#td .rt ul li p span { font-size: 18px; font-weight: normal; }
+
+#td .cs article .tdwbox{ width: 670px; padding: 40px; background: #fff; border-radius: 20px; box-sizing: border-box; }
+#td .cs article.num { margin-left: 20px; }
+#td .cs article.ld { position: absolute; right: 20px; bottom: 30px; }
+#td .sel { margin-top: 10px; }
+#td ul { margin-top: 10px; }
+#td .sel:before { width: 26px;  height: 14px; display: inline-block; background: #fff; }
+#td .sel span { font-size: 14px; color: #666; margin-right: 10px; }
+#td .tdbox article a.sel:before { width: 26px; height: 14px; background: #fcf; border-radius: 5px; display: inline-block; content: ""; margin-right: 4px; }
+#td .tdbox article.num .tdwbox a.sel:before { background: #5470c6; }
+#td .tdbox article.ld .tdwbox ul li:nth-child(1) a.sel:before { background: #5470c6; }
+#td .tdbox article.ld .tdwbox ul li:nth-child(2) a.sel:before { background: #91cc75; }
+#td .tdbox article.ld .tdwbox ul li:nth-child(3) a.sel:before { background: #fac858; }
+
+#td .co article .tdwbox { width: 440px; height: 303px; padding: 40px; background: #fff; border-radius: 20px; box-sizing: border-box; margin-right: 20px; }
+#td .co article.pp { margin-left: 20px; }
+#td .co article.pp .tdwbox a.sel:before { background: #5470c6; }
+#td .co article.pt { position: absolute; left: 480px; top: 89px; }
+#td .co article.pt a.sel:before { width: 12px; height: 12px; border: 2px solid #0c0; background: #fcf; border-radius: 14px; display: inline-block; content: ""; margin-right: 4px; }
+#td .co article.pt .tdwbox ul li { float: left; }
+#td .co article.pt .tdwbox ul li a span { position: relative; top: -3px; }
+#td .co article.pt .tdwbox ul.fi li:nth-child(1) a.sel:before { background: #fff; border-color: #5470c6; }
+#td .co article.pt .tdwbox ul.fi li:nth-child(2) a.sel:before { background: #fff; border-color: #91cc75; }
+#td .co article.pt .tdwbox ul.fi li:nth-child(3) a.sel:before { background: #fff; border-color: #fac858; }
+#td .co article.pt .tdwbox ul.nb { position: absolute; right: 40px; bottom: 40px; }
+#td .co article.pt .tdwbox ul.nb li:nth-child(1) { color: #999; }
+#td .co article.pt .tdwbox ul.nb li:nth-child(2) { color: #666; margin: 0 10px; }
+#td .co article.pt .tdwbox ul.nb li:nth-child(3) { color: #333; }
+#td .co article.fm { margin-right: 0; position: absolute; right: 0; top: 89px; }
+
+#td .fms article .tdwbox { width: 670px; padding: 20px; background: #fff; border-radius: 20px; box-sizing: border-box; }
+#td .fms article.ra { margin-left: 20px; }
+#td .fms article.ra .tdwbox { padding: 20px 60px; }
+#td .tdbox article.ra .tdwbox ul.fi { position: absolute; right: 60px; top: 10px; }
+#td .tdbox article.ra .tdwbox ul.fi li span { font-size: 12px; }
+#td .tdbox article.ra .tdwbox ul li { margin-bottom: 8px; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(1) a.sel:before { background: #5470c6; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(2) a.sel:before { background: #91cc75; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(3) a.sel:before { background: #fac858; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(4) a.sel:before { background: #ee6666; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(5) a.sel:before { background: #73c0de; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(6) a.sel:before { background: #3ba272; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(7) a.sel:before { background: #fc8452; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(8) a.sel:before { background: #9a60b4; }
+#td .tdbox article.ra .tdwbox ul li:nth-child(9) a.sel:before { background: #ea7ccc; }
+#td .tdbox article.ra .tdwbox ul.nb { position: absolute; right: 60px; bottom: 10px; }
+#td .tdbox article.ra .tdwbox ul.nb li { float: left; }
+#td .tdbox article.ra .tdwbox ul.nb li:nth-child(1) { color: #999; }
+#td .tdbox article.ra .tdwbox ul.nb li:nth-child(2) { color: #666; margin: 0 10px; }
+#td .tdbox article.ra .tdwbox ul.nb li:nth-child(3) { color: #333; }
+
+#td .fms article.snufm { position: absolute; right: 20px; top: 89px; }
+#td .fms article.snufm ul{ margin-top: 0; }
+#td .fms article.snufm ul li { float: left; }
+#td .fms article.snufm .hg { background: #153a87; transition: 0; border-radius: 20px; font-size: 16px; margin-top: 5px; margin-bottom: 5px; }
+#td .fms article.snufm .hg:hover { background: #153a87; }
+
+#coll { padding: 110px 0; }
+#coll .more { text-align: right; margin-top: 50px; margin-bottom: 20px; position: relative; left: -20px; }
+#coll .box { width: 100%; background: #f7f6f6; border-radius: 30px; padding: 40px 40px 60px; box-sizing: border-box; position: relative; }
+#coll .box article { width: 640px; position: absolute; top: 40px; left: 235px; }
+#coll .box>a { position: relative; top: -80px; }
+#coll .box article h4 { font-size: 28px; }
+#coll .box article p { font-size: 16px; color: #666; line-height: 1.4; margin-top: 10px; margin-bottom: 20px; }
+#coll .box article .ellipsis2 { width: 440px; }
+#coll .box article ul li { font-size: 16px; font-weight: 900; float: left; margin-right: 20px; }
+#coll .box article ul li a i { font-size: 28px; position: relative; top: 4px; margin-right: 4px; }
+
+#coll .add { font-size: 20px; margin-left: 195px; }
+#coll ul.bc { position: absolute; right: 40px; bottom: 60px; }
+#coll ul.bc:after { content: ""; width: 525px; height: 14px; display: block; background: #835a5a; }
+#coll ul.bc li { float: left; width: 120px; height: 170px; margin-left: 40px; }
+#coll ul.bc li a img { width: 120px; height: 170px; }
+
+
+#comco .tt { margin-bottom: 40px; }
+#comco .comcoAr span { color: #0078fe; font-size: 18px; margin-right: 10px; display: inline-block; }
+#comco .comcoAr h4 { font-size: 22px; margin-top: 20px; margin-bottom: 10px; }
+#comco .comcoAr p { font-size: 16px; color: #666; line-height: 1.6; }
+#comco .comcoAr .ellipsis2 { width: 413px; }
+#comco { background: linear-gradient(90deg, rgba(255,236,244,1) 0%, rgba(235,242,250,1) 31%, rgba(242,238,255,1) 100%); padding: 110px 0; }
+#comco .more { position: absolute; right: 0; top: 50px; }
+#comco .comcoAr { position: relative; }
+#comco .gbox { width: 453px; height: 190px; background: #f4f4f4; border-radius: 20px; position: absolute; padding: 30px 20px; box-sizing: border-box; top: 0; }
+#comco .wbox { width: 453px; height: 430px; background: #fff; border-radius: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
+#comco .comco2 { position: absolute; left: 473px; top: 0; }
+#comco .comco3 { position: absolute; right: 0; top: 0; }
+#comco .wbox ul { position: absolute; left: 28px; top: 220px; }
+#comco .wbox ul li { float: left; width: 120px; text-align: center; margin-right: 20px; }
+#comco .wbox ul li:last-child { margin-right: 0; }
+#comco .wbox ul li .frame { width: 120px; height: 120px; overflow: hidden; border-radius: 120px; }
+#comco .wbox ul li .frame img { width: 120px; height: 120px; transition: 0.3s; }
+#comco .wbox ul li:hover .frame img { scale: 1.1; }
+#comco .wbox ul li strong { margin-top: 10px; color: #153a87; }
+#comco .wbox ul li:hover strong { text-decoration: underline; text-decoration-color: #153a87; }
+#comco .wbox ul li .ellipsis2 { width: 120px; word-break: keep-all; }
+
+#sj { padding: 110px 0; }
+#sj a.bt { border: 1px solid #000; padding: 16px; border-radius: 10px; background: #fff; position: absolute; left: 250px; top: 0; }
+#sj a.bt span { font-size: 16px; }
+#sj a.bt span i { font-size: 14px; font-style: normal; margin-left: 10px; }
+#sj .sjbox { background: #0078fe; color: #fff; height: 235px; width: 100%; padding: 80px 70px; box-sizing: border-box; border-radius: 30px; margin-top: 40px; }
+#sj .sjbox h2 { font-size: 34px; margin-bottom: 10px; }
+#sj .sjbox p { font-size: 16px; }
+#sj .go { font-size: 16px; font-weight: bold; float: right; margin-top: 10px; }
+#sj .go img { margin-right: 10px; position: relative; top: 1px; }
+#sj .go i { font-size: 22px; margin-left: 6px;  position: relative; top: 3px; }
+
+#sjb { padding-bottom: 110px; }
+#sjb ul li { width: 335px; color: #fff; position: relative; height: 314px; float: left; margin-right: 20px; }
+#sjb ul li:last-child { margin-right: 0; }
+#sjb ul li a .frame { display: block; width: 335px; height: 314px; overflow: hidden; border-radius: 20px; }
+#sjb ul li a .frame img { border-radius: 20px; width: 335px; height: 314px;  transition: 0.3s; }
+#sjb ul li a .frame:hover img { scale: 1.1; }
+#sjb ul li .frame { width: 335px; height: 314px;  overflow: hidden; border-radius: 20px; }
+#sjb ul li .frame img { border-radius: 20px; width: 335px; height: 314px; transition: 0.3s; }
+#sjb ul li:hover .frame img { scale: 1.1; }
+#sjb ul li h3 { font-size: 30px; position: absolute; top: 40px; left: 40px; }
+#sjb ul li p { font-size: 15px; line-height: 1.6; word-break: keep-all; position: absolute; bottom: 40px; left: 40px; width: 225px; word-break: keep-all; }
+#sjb ul li:nth-child(2) p { bottom: 110px; }
+#sjb ul li .btb { position: absolute; bottom: 40px; left: 40px; font-weight: bold; }
+#sjb ul li .btb a { float: left; margin-right: 10px; }
+#sjb ul li a.bt { border: 2px solid #fff; width: 119px; height: 50px; border-radius: 50px; text-align: center; }
+#sjb ul li a.bt:hover { background: #fff; color: #000; }
+
+
+#ct { padding-bottom: 110px; }
+#ct .tt h3 { margin-bottom: 40px; }
+#ct .ctbox { position: relative; }
+#ct article { height: 270px; background: #fff; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); width: 453px; border-radius: 30px; border: 1px solid #fdfdfd; padding: 40px 30px; box-sizing: border-box; position: relative; }
+#ct .guide { position: absolute; left: 473px; top: 0; }
+#ct .sinteresting { position: absolute; right: 0; top: 0; }
+#ct article h4 { font-size: 20px; margin-bottom: 50px; }
+#ct article b { color: #666; font-weight: normal; position: absolute; top: 76px; left: 30px; }
+#ct article a.go { color: #666; position: absolute; top: 44px; right: 30px; }
+#ct article ul li { float: left; margin-right: 11px; }
+#ct article ul li a p { width: 86px; height: 86px; border-radius: 100px; background: #eee; }
+#ct article ul li a p img { height: 50px; }
+#ct article ul li a h5 { text-align: center; font-size: 15px; font-weight: normal; margin-top: 10px;  }
+#ct article.sinteresting h4 { margin-bottom: 0; }
+#ct article.sinteresting img { margin-top: 30px; margin-left: 50px; }
+
+
+/* sub - know */
+.stt strong { font-size: 18px; color: #0078fe; }
+.stt h3 { font-size: 46px; margin-top: 10px; font-weight: normal; }
+.stt h3 span { font-weight: 900; }
+.sbox { width: 100%; background: #0078fe; border-radius: 20px; padding: 30px; }
+.rhg { display: inline-block; background: #268cfe; color: #fff; padding: 10px 12px; border-radius: 20px; }
+.dmore { color: #fff; font-size: 16px; font-weight: bold; }
+.dmore:hover span { text-decoration: underline; }
+.dmore i { font-size: 26px; }
+.dmore i:hover { text-decoration: none; opacity: 0.3; }
+.kci { width: 80px; line-height: 25px; border: 1px solid #ddd; box-sizing: border-box; border-radius: 6px; padding-left: 35px; padding-right: 5px; position: relative; margin-top: 15px; }
+.kci span { width: 30px; line-height: 25px; background: #130099; display: block; color: #fff; text-align: center; border-radius: 6px; position: absolute; left: 0; top: 0; }
+.clgo { width: 180px; line-height: 40px; border: 2px solid #fff; border-radius: 80px; display: inline-block; text-align: center; font-size: 16px; color: #fff; font-weight: bold; }
+.srl { position: relative; }
+.srl:hover .left a { opacity: 1; }
+.srl:hover .right a { opacity: 1; }
+.srl ul li a .frame:hover:after { opacity: 0.9; }
+.srl .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 160px; z-index: 3; opacity: 0; }
+.srl .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 160px; z-index: 3; opacity: 0; }
+.srls { position: relative; }
+.srls .left a { font-size: 20px; width: 30px; line-height: 30px; border-radius: 30px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: block; position: absolute; left: 0; top: 280px; z-index: 3; opacity: 1; }
+.srls .right a { font-size: 20px; width: 30px; line-height: 30px; border-radius: 30px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: block; position: absolute; right: 0; top: 280px; z-index: 3; opacity: 1; }
+.kht { font-size: 24px; color: #fff; background: #0078fe; display: block; width: 40px; line-height: 40px; text-align: center; border-top-right-radius: 19px; border-bottom-left-radius: 19px; }
+#kcom .hg { background: #0078fe; margin-top: 25px; }
+#kcom .kcombox { position: relative; }
+
+#kcom { padding: 40px 0; }
+#kcom h3 { margin-bottom: 40px; font-weight: 900; }
+#kcom h4 { font-size: 18px; color: #153a96; margin-bottom: 10px; margin-left: 5px; }
+#kcom article .ellipsis2 { width: 266px; }
+#kcom article>div { width: 422px; border: 2px solid #0078fe; box-sizing: border-box; border-radius: 20px; padding: 20px; position: relative; height: 240px; background: #fff; }
+#kcom article a img { width: 96px; height: 139px; object-fit: cover; }
+#kcom article .ment { position: absolute; top: 20px; left: 140px; }
+#kcom article a h5 { font-size: 18px; }
+#kcom article .ment b { margin: 10px 0; line-height: 1.6; }
+#kcom article.kcompaper { position: absolute; left: 448px; top: 0; }
+#kcom article.kcompaper .ellipsis2 { width: 382px; }
+#kcom article.kcompaper a h5 { color: #153a96; }
+#kcom article.kcompaper b { margin-top: 30px; }
+#kcom article.kcompaper p { color: #666; line-height: 1.6; }
+#kcom article.kcompaper ul { position: absolute; left: 20px; bottom: 20px; }
+#kcom article.kcomcoll { position: absolute; right: 0; top: 0; }
+#kcom article.kcomcoll .ment a { font-size: 18px; font-weight: bold; display: block; }
+#kcom article.kcomcoll .ment p { font-weight: normal; margin: 6px 0 30px; }
+
+#algo { padding: 40px 0; }
+#algo h3 { font-weight: 900; }
+#algo ul li { float: left; margin-right: 10px; margin-bottom: 10px; font-size: 15px; font-weight: bold; }
+#algo ul li:first-child a { color: #fbce40; }
+#algo .sbox { margin-top: 20px; }
+
+#find { padding: 40px 0; }
+#find .more { position: absolute; right: 0; top: 50px; }
+#find .find1 { position: relative; }
+#find .find1:hover .left a { opacity: 1; }
+#find .find1:hover .right a { opacity: 1; }
+#find .find1 ul li a .frame:hover:after { opacity: 0.9; }
+#find .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 132px; z-index: 2; opacity: 0; }
+#find .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 132px; z-index: 2; opacity: 0; }
+
+#find ul { margin-top: 50px; }
+#find ul li { float: left; width: 198px; margin-right: 26px; }
+#find ul li:last-child { margin-right: 0; }
+#find ul li h4 { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 30px; margin-bottom: 10px; font-weight: normal; }
+#find ul li a .frame { width: 198px; height: 285px; overflow: hidden; transition: 0.3s; position: relative; }
+#find ul li:nth-child(1) a .frame:after { content: "이토록 평범한 미래"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#find ul li:nth-child(2) a .frame:after { content: "여자 없는 남자들"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#find ul li:nth-child(3) a .frame:after { content: "내게 무해한 사람"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#find ul li:nth-child(4) a .frame:after { content: "지리의 힘"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#find ul li:nth-child(5) a .frame:after { content: "논문의 힘"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#find ul li:nth-child(6) a .frame:after { content: "방과후"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#find ul li a .frame img { width: 198px; height: 285px; object-fit: cover; transition: 0.3s; }
+#find ul li a .frame:hover img, #find ul li a .frame:focus img { scale: 1.05; }
+
+#road { background: url(../images/know_road_bg.png) #f9f9fc no-repeat center/cover; height: 440px; position: relative; margin-top: 60px; }
+#road:after { content: ""; background: url(../images/know_road_bgimg.png) no-repeat center/cover; height: 400px; width: 800px; position: absolute; right: 0; bottom: 0; display: block; }
+#road .stt h3 { font-weight: 900; color: #0078fe; padding-top: 50px; margin-top: 0; }
+#road article p { font-size: 20px; line-height: 1.6; margin: 30px 0; }
+#road article span { font-size: 16px; color: #0078fe; font-weight: 900; }
+#road a { width: 180px; line-height: 50px; display: block; background: #0078fe; color: #fff; text-align: center; border-radius: 10px; font-size: 16px; font-weight: bold; margin-top: 30px; }
+
+#algocom { background:#fff; padding: 80px 0; }
+#algocom .swrap>.stt h3 { font-weight: 900; }
+#algocom .more { position: absolute; right: 0; top: 50px; }
+#algocom .algocom1 { position: relative; }
+#algocom .algocom1:hover .left a { opacity: 1; }
+#algocom .algocom1:hover .right a { opacity: 1; }
+#algocom .algocom1 ul li a .frame:hover:after { opacity: 0.9; }
+#algocom .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 120px; z-index: 2; opacity: 0; }
+#algocom .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 120px; z-index: 2; opacity: 0; }
+#algocom ul { margin-top: 20px; }
+#algocom ul li { width: 315px; height: 300px; border: 2px solid #0078fe; box-sizing: border-box; margin-right: 20px; border-radius: 30px; float: left; padding: 40px 32px 20px; background: #fff; position: relative; margin-top: 20px; top: 0; transition: 0.3s; } /* transition을 줘도 튄다 하면 초기점을 잡아주어야함. 이번엔 hover했을 때 top값을 움직였으므로 top값을 초기화해줘야함. */
+#algocom ul li:hover { box-shadow: 2px 5px 15px rgba(0,0,0,0.2); position: relative; top: -8px; }
+#algocom ul li:nth-child(4n) { margin-right: 0; }
+#algocom ul li a:hover h3 { text-decoration: underline; text-decoration-color: #153a96; }
+#algocom ul li a h3 { font-size: 20px; color: #153a96; margin-bottom: 30px; width: 251px; }
+#algocom ul li a strong { font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#algocom ul li a:hover strong { text-decoration: underline; text-decoration-color: #000; }
+#algocom ul li a p { font-size: 13px; color: #666; margin-top: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#algocom ul li a:hover p { text-decoration: underline; text-decoration-color: #666; }
+#algocom .hgd { position: absolute; left: 32px; bottom: 30px; }
+#algocom .hg { background: #0078fe; }
+#algocom .hg:hover { background: #153a87; text-decoration: none; }
+
+#popcom { background:#fff; padding-bottom: 80px; }
+#popcom .swrap>.stt h3 { font-weight: 900; }
+#popcom .more { position: absolute; right: 0; top: 40px; }
+#popcom .popcom1 { position: relative; }
+#popcom .popcom1:hover .left a { opacity: 1; }
+#popcom .popcom1:hover .right a { opacity: 1; }
+#popcom .popcom1 ul li a .frame:hover:after { opacity: 0.9; }
+#popcom .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 120px; z-index: 2; opacity: 0; }
+#popcom .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 120px; z-index: 2; opacity: 0; }
+#popcom ul { margin-top: 20px; }
+#popcom ul li { width: 315px; height: 300px; border: 2px solid #0078fe; box-sizing: border-box; margin-right: 20px; border-radius: 30px; float: left; padding: 40px 32px 20px; background: #fff; position: relative; margin-top: 20px; top: 0; transition: 0.3s; } /* transition을 줘도 튄다 하면 초기점을 잡아주어야함. 이번엔 hover했을 때 top값을 움직였으므로 top값을 초기화해줘야함. */
+#popcom ul li:hover { box-shadow: 2px 5px 15px rgba(0,0,0,0.2); position: relative; top: -8px; }
+#popcom ul li:nth-child(4n) { margin-right: 0; }
+#popcom ul li a:hover h3 { text-decoration: underline; text-decoration-color: #153a96; }
+#popcom ul li a h3 { font-size: 20px; color: #153a96; margin-bottom: 30px; width: 251px; }
+#popcom ul li a strong { font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: block; }
+#popcom ul li a:hover strong { text-decoration: underline; text-decoration-color: #000; }
+#popcom ul li a p { font-size: 13px; color: #666; margin-top: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#popcom ul li a:hover p { text-decoration: underline; text-decoration-color: #666; }
+#popcom .hgd { position: absolute; left: 32px; bottom: 30px; }
+#popcom .hg { background: #0078fe; }
+#popcom .hg:hover { background: #153a87; text-decoration: none; }
+
+#att { background:#fff; padding-bottom: 80px; }
+#att .swrap>.stt h3 { font-weight: 900; display: inline-block; }
+#att .swrap>.stt .num { position: relative; top: -10px; margin-left: 20px; width: 90px; line-height: 34px; border: 1px solid #ddd; box-sizing: border-box; padding: 0 5px; display: inline-block; border-radius: 6px; color: #666; }
+#att .swrap>.stt .num i { font-style: normal; font-size: 12px; margin-left: 10px; display: inline-block; }
+#att .more { position: absolute; right: 0; top: 40px; }
+#att .att1 { position: relative; }
+#att .att1:hover .left a { opacity: 1; }
+#att .att1:hover .right a { opacity: 1; }
+#att .att1 ul li a .frame:hover:after { opacity: 0.9; }
+#att .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 120px; z-index: 2; opacity: 0; }
+#att .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 120px; z-index: 2; opacity: 0; }
+#att ul { margin-top: 20px; }
+#att ul li { width: 315px; height: 300px; border: 2px solid #0078fe; box-sizing: border-box; margin-right: 20px; border-radius: 30px; float: left; padding: 40px 32px 20px; background: #fff; position: relative; margin-top: 20px; top: 0; transition: 0.3s; } /* transition을 줘도 튄다 하면 초기점을 잡아주어야함. 이번엔 hover했을 때 top값을 움직였으므로 top값을 초기화해줘야함. */
+#att ul li:hover { box-shadow: 2px 5px 15px rgba(0,0,0,0.2); position: relative; top: -8px; }
+#att ul li:nth-child(4n) { margin-right: 0; }
+#att ul li a:hover h3 { text-decoration: underline; text-decoration-color: #153a96; }
+#att ul li a h3 { font-size: 20px; color: #153a96; margin-bottom: 30px; width: 251px; }
+#att ul li a strong { font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 251px; }
+#att ul li a:hover strong { text-decoration: underline; text-decoration-color: #000; }
+#att ul li a p { font-size: 13px; color: #666; margin-top: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#att ul li a:hover p { text-decoration: underline; text-decoration-color: #666; }
+#att .hgd { position: absolute; left: 32px; bottom: 30px; }
+#att .hg { background: #0078fe; }
+#att .hg:hover { background: #153a87; text-decoration: none; }
+
+.pre { background: url(../images/know_pre_bg.png) no-repeat center/cover; width: 100%; border-radius: 20px; height: 185px; padding: 30px; box-sizing: border-box; margin: 50px 0 100px; }
+.pre h2 { font-size: 30px; color: #fff; }
+.pre p { font-size: 16px; color: #fff; margin: 15px 0; }
+
+#osu { background:#f5f5f5; padding: 80px 0; }
+#osu .swrap .stt h3 { font-weight: 900; }
+#osu .more { position: absolute; right: 0; top: 50px; }
+#osu .srl { position: relative; }
+#osu .srl:hover .left a { opacity: 1; }
+#osu .srl:hover .right a { opacity: 1; }
+#osu .srl ul li a .frame:hover:after { opacity: 0.9; }
+#osu .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 120px; z-index: 2; opacity: 0; }
+#osu .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 120px; z-index: 2; opacity: 0; }
+#osu ul { margin-top: 20px; }
+#osu ul li { width: 315px; height: 250px; border: 2px solid #333; box-sizing: border-box; margin-right: 20px; border-radius: 30px; float: left; padding: 40px 32px 20px; background: #fff; position: relative; margin-top: 20px; top: 0; transition: 0.3s; }
+#osu ul li:hover { box-shadow: 2px 5px 15px rgba(0,0,0,0.2); position: relative; top: -8px; }
+#osu ul li:nth-child(4n) { margin-right: 0; }
+#osu ul li a:hover h3 { text-decoration: underline; }
+#osu ul li a h3 { font-size: 20px; color: #000; margin-bottom: 10px; width: 251px; word-break: keep-all; }
+#osu ul li a strong { font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-weight: normal; }
+#osu ul li a:hover strong { text-decoration: underline; text-decoration-color: #000; }
+#osu ul li a p { font-size: 13px; color: #666; margin-top: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#osu ul li a:hover p { text-decoration: underline; }
+#osu .hgd { position: absolute; left: 32px; bottom: 30px; }
+#osu .hg { background: #4f4f4f; }
+
+#osu .poptd .stt h3 { font-weight: normal; margin-top: 70px; }
+#osu .planner { background: url(../images/know_planner_bg.png) no-repeat center/cover; width: 100%; border-radius: 20px; height: 185px; padding: 30px; box-sizing: border-box; margin-top: 100px; position: relative; }
+#osu .planner:before { content: ""; background: url(../images/know_planner_bgimg.png) no-repeat center/cover; width: 371px; height: 230px; position: absolute; right: 0; bottom: 0; display: block; }
+#osu .planner h2 { font-size: 30px; color: #fff; }
+#osu .planner p { font-size: 16px; color: #fff; margin: 15px 0; }
+#osu .planner a:nth-of-type(2) { margin-left: 10px; }
+
+#kcoll article { border: 1px solid #ccc; z-index: 2; border-radius: 20px; }
+#kcoll .stt { margin-bottom: 40px; }
+#kcoll .stt h3 { font-weight: 900; }
+#kcoll .kcollAr:hover .srl .left a { opacity: 1; }
+#kcoll .kcollAr:hover .srl .right a { opacity: 1; }
+#kcoll .kcollAr span { color: #0078fe; font-size: 15px; margin-right: 6px; display: inline-block; font-weight: bold; }
+#kcoll .kcollAr h4 { font-size: 22px; margin-top: 20px; margin-bottom: 10px; }
+#kcoll .kcollAr p { font-size: 14px; color: #666; line-height: 1.6; }
+#kcoll .kcollAr .ellipsis2 { width: 413px; }
+#kcoll { background: #fff; padding: 40px 0 260px; }
+#kcoll .kcollAr { position: relative; }
+#kcoll .kgbox { width: 315px; height: 190px; background: #f4f4f4; border-radius: 20px; position: absolute; padding: 20px; box-sizing: border-box; top: 0; }
+#kcoll .kgbox .kht { position: absolute; top: 0; right: 0; }
+#kcoll .kwbox { width: 315px; height: 430px; background: #fff; border-radius: 20px; }
+#kcoll .kgbox p.ellipsis2 { width: 275px; }
+#kcoll .kcoll1 { width: 315px; }
+#kcoll .kcoll1 .kgbox { top: 1px; }
+#kcoll .kcoll2 { position: absolute; left: 335px; top: 0; }
+#kcoll .kcoll3 { position: absolute; right: 335px; top: 0; }
+#kcoll .kcoll4 { position: absolute; right: 0; top: 0; }
+#kcoll .kwbox ul { position: absolute; left: 20px; top: 220px; }
+#kcoll .kwbox ul li { float: left; width: 78px; text-align: center; margin-right: 20px; }
+#kcoll .kwbox ul li:last-child { margin-right: 0; }
+#kcoll .kwbox ul li .frame { width: 78px; height: 110px; overflow: hidden; border: 1px solid #ccc; box-sizing: border-box; }
+#kcoll .kwbox ul li .frame img { width: 78px; height: 110px; transition: 0.3s; }
+#kcoll .kwbox ul li:hover .frame img { scale: 1.1; }
+#kcoll .kwbox ul li strong { margin-top: 10px; color: #153a87; }
+#kcoll .kwbox ul li:hover strong { text-decoration: underline; text-decoration-color: #153a87; }
+#kcoll .kwbox ul li strong.ellipsis2 { width: 78px; word-break: keep-all; }
+#kcoll .kwbox .ssh { position: absolute; left: 20px; bottom: 20px; font-size: 13px; width: 275px; }
+#kcoll .kwbox .ssh b { color: #000; }
+#kcoll .kwbox .ssh a { position: absolute; right: 0; font-size: 18px; }
+
+/* sub - topic */
+.ttt h3 { font-size: 32px; color: #000; font-weight: 900; }
+.ttt span { color: #0078fe; }
+.ttt strong { font-size: 17px; margin-top: 10px; display: block; }
+.bbox { width: 100%; background: #07284b; color: #fff; line-height: 52px; border-top-left-radius: 15px; border-top-right-radius: 15px; }
+.bbox h4 { font-size: 17px; }
+.tgbox { background: #f9f9f9; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; padding: 28px; }
+.tgbox .list b { color: #153a87; font-size: 22px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; }
+.tgbox .list a { width: 160px; height: 36px; border: 1px solid #ccc; background: #fff; border-radius: 40px; position: relative; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-top: 15px; } /* display:flex를 주면 자식요소들이 inline요소처럼 바뀜 */
+.tgbox .list a span { margin-left: 10px; background: #fc0000; color: #fff; width: 26px; line-height: 20px; text-align: center; border-radius: 24px; font-size: 14px; }
+[type="radio"] { vertical-align: middle; appearance: none; border: 1px solid #ccc; border-radius: 30px; width: 20px; height: 20px; cursor: pointer; }
+[type="radio"]:checked { border: 5px solid #153a87; }
+
+#tsj { margin-top: 70px; }
+#tsj .ttt a { font-size: 15px; font-weight: 600; margin: 20px 0 30px; display: block; text-align: right; }
+#tsj .ttt a i { font-size: 18px; }
+#tsj ul { background: #0078fe; color: #fff; width: 100%; padding: 30px 30px 20px 30px; box-sizing: border-box; border-radius: 15px; }
+#tsj ul li { float: left; margin-right: 10px; margin-bottom: 10px; font-weight: bold; }
+#tsj ul li:first-child a { color: #fbce5f; }
+#tsj .sjbox { background: #153a87; color: #fff; width: 100%; padding: 50px 60px 0 60px; box-sizing: border-box; border-radius: 15px; margin-top: 40px; }
+#tsj .sjbox h2 { font-size: 40px; margin-bottom: 15px; }
+#tsj .sjbox p { font-size: 17px; }
+#tsj .dmore { padding: 30px 0 10px; }
+#tsj .dmore i:hover { opacity: 1; color: #0078fe; }
+
+#amal .ttt p { font-size: 13px; color: #fc0000; text-align: right; margin: 30px 0 10px; }
+#amal { padding: 40px 0 80px; }
+#amal .tk .tgbox { align-items: flex-start; }
+#amal .tk .tgbox .list { margin-right: 10px; }
+
+#ttd .ytd { width: 100%; height: 60px; background: #e6ebef; border-radius: 15px; }
+#ttd .ytd a { width: 652px; border-radius: 15px; line-height: 50px; text-align: center; font-size: 18px; font-weight: 900; color: #666; }
+#ttd .ytd a:first-child { margin-right: 5px; background: #fff; color: #153a87; }
+#ttd .ttt { margin: 40px 0; }
+#ttd .bbox { height: 52px; box-sizing: border-box; background: #153a87; }
+#ttd .bbox a { width: 440px; float: left; font-size: 16px; font-weight: 900; }
+#ttd .bbox a.select { color: #fbce5f; border-bottom: 3px solid #fbce40; height: 50  px; }
+#ttd .twbox { width: 100%; padding: 110px; box-sizing: border-box; border: 1px solid #ddd; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; position: relative; }
+#ttd .twbox fieldset { border: none; justify-content: flex-end; position: absolute; top: 40px; right: 30px; }
+#ttd .twbox fieldset div { width: 50px; }
+#ttd .twbox input[type="radio"] + label { padding: 0 5px; }
+
+#tfind { padding: 40px 0; }
+#tfind .more { position: absolute; right: 0; top: 50px; }
+#tfind .tfind1 { position: relative; }
+#tfind .tfind1:hover .left a { opacity: 1; }
+#tfind .tfind1:hover .right a { opacity: 1; }
+#tfind .tfind1 ul li a .frame:hover:after { opacity: 0.9; }
+#tfind .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 132px; z-index: 2; opacity: 0; }
+#tfind .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.6); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 132px; z-index: 2; opacity: 0; }
+#tfind ul { margin-top: 50px; }
+#tfind ul li { float: left; width: 198px; margin-right: 26px; }
+#tfind ul li:last-child { margin-right: 0; }
+#tfind ul li h4 { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 30px; margin-bottom: 10px; font-weight: normal; }
+#tfind ul li a .frame { width: 198px; height: 285px; overflow: hidden; transition: 0.3s; position: relative; }
+#tfind ul li:nth-child(1) a .frame:after { content: "숨 : 테드 창 소설"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#tfind ul li:nth-child(2) a .frame:after { content: "채식주의자 : 한강 연작소설"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#tfind ul li:nth-child(3) a .frame:after { content: "여름의 빌라 : 백수린 소설"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#tfind ul li:nth-child(4) a .frame:after { content: "밝은 밤 : 최은영 첫 장편소설"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#tfind ul li:nth-child(5) a .frame:after { content: "소년이 온다 : 한강 장편소설"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#tfind ul li:nth-child(6) a .frame:after { content: "달러구트 꿈 백화점. 이미예 장편소설"; width: 198px; line-height: 285px; text-align: center; color: #fff; background: #0078fe; display: block; position: absolute; top: 0; opacity: 0; transition: 0.3s; }
+#tfind ul li a .frame img { width: 198px; height: 285px; object-fit: cover; transition: 0.3s; }
+#tfind ul li a .frame:hover img, #tfind ul li a .frame:focus img { scale: 1.05; }
+
+#comli { background: #f5f5f5; padding: 40px 0; }
+#comli .more { position: absolute; right: 0; top: 10px; }
+#comli .err { padding: 100px 0; }
+#comli .err i { color: #bbb; font-size: 30px; }
+#comli .err p { color: #bbb; font-size: 16px; margin-top: 6px; }
+
+.tkcoll .ttt h3 { margin-bottom: 40px; }
+#kcoll.tkcoll { padding: 40px 0; }
+#kcoll.tkcoll .more { position: absolute; right: 0; top: 53px; }
+
+#uni { padding: 40px 0 260px; }
+#uni .ttt strong { font-size: 24px; font-weight: normal; margin: 30px 0; }
+#uni .tuni { position: relative; }
+#uni .tuni:before { content: ""; background: rgba(0,0,0,0.6); width: 100%; height: 750px; display: block; position: absolute; top: 0; left: 0; border-radius: 30px; }
+#uni .tuni .tuniment { position: absolute; top: 0; width: 100%; color: #fff; height: 100%; }
+#uni .tuni .tuniment h4 { font-size: 24px; margin-bottom: 40px; }
+#uni .tuni .tuniment p { font-size: 16px; margin-bottom: 20px; }
+#uni .tuni .tuniment ul li:before { content: "●"; font-size: 6px; margin-right: 15px; }
+#uni .tuni .tuniment ul li { font-size: 16px; word-break: keep-all; line-height: 1.8; }
+#uni .tuni .tuniment .start { width: 150px; line-height: 40px; display: block; text-align: center; background: rgba(0, 190, 190, 0.7); border: 1px solid #00bebe; border-radius: 6px; font-size: 16px; margin: 20px 0; transition: 0.3s; }
+#uni .tuni .tuniment .start:hover { width: 150px; line-height: 40px; display: block; text-align: center; background: #fff; color: #000; border: 1px solid #00bebe; border-radius: 6px; font-size: 16px; margin: 20px 0; text-decoration: underline; text-decoration-color: #000; }
+#uni .tuni .tuniment .nomore{ text-decoration: underline; text-decoration-color: #fff; transition: 0.3s; }
+#uni .tuni .tuniment .nomore:hover { text-decoration: underline; text-decoration-color: #00bebe; color: #00bebe; }
+
+#login { background: #f9fbfc; padding: 100px 0; }
+#login .loginbox { margin: 0 auto; background: #f5f5f5; width: 514px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 20px; padding: 30px 0; }
+#login .loginbox>img { width: 100px; }
+#login .loginbox .logintop { width: 100%; height: 100%; margin: 20px 0 100px; }
+#login .loginbox .logintop li { width: 400px; line-height: 70px; border-radius: 10px; font-size: 16px; color: #fff; font-weight: bold; text-align: center; position: relative; margin: 10px 0; }
+#login .loginbox .logintop li a span { position: relative; left: 20px; }
+#login .loginbox .logintop li:nth-child(1):before { content: ""; background: url(../images/login_img1.png) no-repeat center/cover; width: 30px; height: 30px; display: block; position: absolute; left: 20px; top: 18px; }
+#login .loginbox .logintop li:nth-child(1) { background: #153a87; }
+#login .loginbox .logintop li:nth-child(2):before { content: ""; background: url(../images/login_img2.png) no-repeat center/cover; width: 30px; height: 30px; display: block; position: absolute; left: 20px; top: 20px; }
+#login .loginbox .logintop li:nth-child(2) { background: #4bac75; }
+#login .loginbox .logintop li:nth-child(3):before { content: ""; background: url(../images/login_img3.png) no-repeat center/cover; width: 35px; height: 35px; display: block; position: absolute; left: 20px; top: 18px; }
+#login .loginbox .logintop li:nth-child(3) { background: #0078fe; }
+#login .loginbox .logintop li a { display: block; height: 100%; }
+#login .loginbox .loginbottom li { width: 227px; line-height: 60px; box-sizing: border-box; text-align: center; font-weight: bold; border-radius: 10px; }
+#login .loginbox .loginbottom li:nth-child(1) { background: #fff; border: 1px solid #ccc; color: #666; margin-right: 20px; }
+#login .loginbox .loginbottom li:nth-child(2) { background: #2c2c2c; color: #fff;  }
+#login .loginbox .loginbottom li a { display: block; }

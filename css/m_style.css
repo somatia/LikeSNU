@@ -1,0 +1,422 @@
+@media (max-width:800px) { /* 모바일 */
+    .pc { display: none !important; }
+.wrap { width: 94%; }
+.swrap { width: 94%; }
+.blank { height: 123px; }
+
+/* header & footer */
+header .wrap { width: 94%; }
+header .snb { font-size: 13px; height: 50px; }
+header .snb li { line-height: 50px; margin-left: 18px; }
+header .snb li i { font-size: 18px; }
+header .gnb { font-size: 16px; padding: 10px 0; }
+header nav a { margin-left: 18px; }
+
+footer { font-size: 13px; }
+footer .wrap>img { width: 200px; }
+footer nav ul li { margin-right: 20px; line-height: 2; }
+footer p { font-size: 12px; }
+footer .wrap>ul { top: 15px; }
+
+/* index */
+#main { height: 400px; }
+#main article.ment { padding-top: 80px; position: relative; margin-bottom: 80px; }
+#main article dl dt { font-size: 17px; }
+#main article dl dd { font-size: 34px; }
+#main article p { font-size: 15px; }
+#main div .bar { margin-top: 60px; }
+#main div>p { height: 4px; }
+#main div p.yl { width: 35%; }
+#main div p.wt { width: 70%; }
+#main div>ul { position: absolute; right: 0; bottom: -10px; left: auto; /* left를 pc버전에서 사용하였으니 auto로 바꾸어주어야 right가 적용됨 */}
+#main div>ul li a i { font-size: 24px; }
+#main div>ul li { float: left; }
+
+#main .sch { position: relative; }
+#main .sch .wrap { width: 100%; box-shadow: 5px 5px 16px rgba(0,0,0,0.2); }
+#main .sch .wrap input { font-size: 14px; padding: 0 100px 0 20px; box-sizing: border-box; position: absolute; top: 30px; left: 0; }
+#main .sch .wrap .schic { top: 22px; }
+#main .sch .wrap .schic a { font-size: 30px; margin-left: 14px; }
+
+
+.tt strong { font-size: 16px; }
+.tt h3 { font-size: 30px; margin: 10px 0 26px 0; }
+.tt p { font-size: 15px; line-height: 1.6; word-break: keep-all; }
+.more { top: 32px; }
+.more a img { height: 10px; }
+
+#com { padding-top: 90px; }
+#com .left a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.3); color: #fff; text-align: center; display: inline-block; position: absolute; left: 0; top: 132px; z-index: 2; }
+#com .right a { font-size: 30px; width: 40px; line-height: 50px; background: rgba(0,0,0,0.3); color: #fff; text-align: center; display: inline-block; position: absolute; right: 0; top: 132px; z-index: 2; }
+
+#com .more { top: 40px; }
+#com ul { margin-top: 50px; }
+#com ul.com2 { margin-top: 0; }
+#com ul li { float: left; width: 48%; margin-right: 4%; margin-bottom: 30px; }
+#com ul li:nth-child(2n) { margin-right: 0; }
+#com ul li h4 { margin-top: 30px; margin-bottom: 0; }
+#com ul li a .frame { width: 100%; height: 260px; transition: none; }
+#com ul li a .frame img { width: 100%; height: 260px; transition: none; }
+#com ul li a .frame img:hover, #com ul li a .frame img:focus { scale: 1; }
+#com ul li a:hover h4, #com ul li a:focus h4 { text-decoration: none; }
+#com ul li a.hg { margin-top: 10px; margin-right: 5px; transition: none; font-size: 13px; }
+#com ul li a.hg:hover, #com ul li:focus a.hg { background: #999; }
+
+#comp .more { top: 40px; }
+#comp { background: url(../images/comp_bg.png) no-repeat center/cover; padding: 80px 0; }
+#comp ul { margin-top: 40px; }
+#comp ul li { width: 100%; height: 230px; float: none; margin-right: 0; float: left; position: relative; transition: none; top: 0; }
+#comp ul li:hover { box-shadow:none; top: 0; } /* 모바일도 누르면 hover가 작동. 따라서 static으로 바꾸지 말고 .hg를 가두는 역할을 계속해서 수행하기 위하여 position:relative를 그대로 가져가야함 */
+#comp ul li a h3 { font-size: 16px; margin-bottom: 20px; }
+#comp ul li a:hover h3 { text-decoration: none; }
+#comp ul li a strong { font-size: 14px; }
+#comp ul li a:hover strong { text-decoration: none; }
+#comp ul li a p { font-size: 13px; color: #666; margin-top: 5px; }
+#comp ul li a:hover p { text-decoration: none; }
+#comp .hg { font-size: 12px; }
+
+
+.tdtx { font-size: 16px; margin-left: 3%; margin-top: 20px; }
+
+#td { background: #eeeff8; padding: 80px 0; }
+#td h3 { font-size: 30px; margin-bottom: 10px; display: block; }
+#td .wrap>p { font-size: 16px; }
+#td .rt ul li { width: 94%; margin-right: 0; float: none; padding: 20px 20px; margin: 0 auto; margin-top: 10px; }
+#td .rt ul li:first-child { margin: 0 auto; }
+#td .rt ul li p { font-size: 40px; }
+
+#td .cs article .tdwbox { width: 94%; padding: 20px; margin-left: 3%; }
+#td .cs article .tdwbox img { width: 100%; }
+#td .cs article.num { margin-left: 0; }
+#td .cs article.ld { position: static; }
+#td ul { margin-top: 10px; }
+#td .sel span { font-size: 14px; }
+#td .tdbox article a.sel:before { width: 20px; height: 12px; }
+
+#td .co article { margin-left: 3%; width: 100%; }
+#td .co article .tdwbox { width: 94%; height: auto; padding: 20px; margin-right: 0; }
+#td .co article .tdwbox img { width: 100%; }
+#td .co article.pp { margin-left: 3%; }
+#td .co article.pt { position: static; }
+#td .co article.pt a.sel:before { width: 10px; height: 10px; }
+#td .co article.pt .tdwbox ul.nb { font-size: 13px; }
+#td .co article.pt .tdwbox ul.nb { position: absolute; right: 20px; bottom: 24px; }
+#td .co article.fm { margin-right: 0; position: static; }
+
+#td .fms article .tdwbox { width: 94%; padding: 20px; margin-left: 3%; }
+#td .fms article .tdwbox img { width: 100%; height: 100%; }
+#td .fms article.ra { margin-left: 0; }
+#td .fms article.ra .tdwbox { padding: 20px 3%; }
+#td .tdbox article.ra .tdwbox ul.fi { position: static; padding: 0 3%; }
+#td .tdbox article.ra .tdwbox ul li { float: left; margin-bottom: 4px; width: 50%; }
+
+#td .fms article.snufm { position: static; }
+#td .fms article.snufm ul{ margin-top: 0; }
+#td .fms article.snufm ul li { float: left; }
+#td .fms article.snufm .hg {font-size: 15px; margin-top: 3px; margin-bottom: 3px; }
+
+#coll { padding: 80px 0; }
+#coll .more { text-align: right; margin-top: 0; margin-bottom: 0; position: absolute; right: 0; top: 50px; }
+#coll .box { padding: 40px 20px; margin-top: 40px; overflow: hidden; }
+#coll .box article { width: 94%; position: static; text-align: center; word-break: keep-all; }
+#coll .box>a { position: static; width: 50%; display: block; }
+#coll .box article h4 { font-size: 22px; margin-top: 30px; margin-bottom: 20px; }
+#coll .box article p { font-size: 14px; margin: 0 auto; line-height: 1.6; }
+#coll .box article .ellipsis2 { width: 90%; -webkit-line-clamp: 4; }
+#coll .box article ul { position: absolute; top: 77px; left:55% ; }
+#coll .box article ul li { font-size: 14px; float: none; margin-right: 0; text-align: left; margin-bottom: 16px; }
+#coll .box article ul li a i { font-size: 25px; }
+
+#coll .add { font-size: 16px; margin-left: 3%; }
+#coll ul.bc { position: static; margin-left: 3%; width: 150%; margin-top: 50px; }
+#coll ul.bc:after { width: 100%; }
+#coll ul.bc li { float: left; width: 120px; height: 170px; margin-left: 3%; }
+#coll ul.bc li a img { width: 120px; height: 170px; }
+
+
+#comco .comcoAr span { font-size: 15px; margin-right: 10px; display: inline-block; word-break: break-all; }
+#comco .comcoAr h4 { margin-top: 16px; margin-bottom: 8px; }
+#comco .comcoAr p { font-size: 14px; color: #666; line-height: 1.6; }
+#comco .comcoAr .ellipsis2 { width: 100%; }
+#comco { padding: 80px 0; }
+#comco .more { position: absolute; right: 0; top: 40px; }
+#comco .gbox { width: 100%; height: auto; padding: 30px 6%; position: static; border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
+#comco .wbox { width: 100%; height: auto; position: static; padding: 6%; box-sizing: border-box; border-top-left-radius: 0; border-top-right-radius: 0; margin-bottom: 30px; }
+#comco .comco2 { position: static; }
+#comco .comco3 { position: static; }
+#comco .comco3 .wbox { margin-bottom: 0; }
+#comco .wbox ul { position: static; }
+#comco .wbox ul li { float: none; width: 100%; margin-right: 0; margin-bottom: 20px; }
+#comco .wbox ul li:last-child { margin-bottom: 0; }
+#comco .wbox ul li a { display: flex; align-items: center; }
+#comco .wbox ul li .frame { width: 40%; height: 100%; overflow: hidden; border-radius: 100%; margin-right: 10%; }
+#comco .wbox ul li .frame img { width: 100%; height: auto; aspect-ratio: 1 / 1; transition: 0; }
+#comco .wbox ul li:hover .frame img { scale: 1; }
+#comco .wbox ul li:hover strong { text-decoration: none; }
+#comco .wbox ul li .ellipsis2 { width: 50%; word-break: keep-all; }
+
+#sj { padding: 80px 0 40px 0; }
+#sj a.bt { padding: 10px; position: absolute; left: auto; right: 0; top: 0; width: 50%; box-sizing: border-box; display: flex; justify-content: center; align-items: center; } /* left가 걸려있었으면 auto로 바꿔주고 right값 줘야함 */
+#sj a.bt span { font-size: 14px; }
+#sj a.bt span i { font-size: 12px; }
+#sj .sjbox { height: 235px; width: 100%; padding: 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+#sj .sjbox h2 { font-size: 28px; margin-bottom: 10px; }
+#sj .sjbox p { font-size: 14px; }
+#sj .go { font-size: 14px; }
+#sj .go i { font-size: 20px; }
+
+#sjb { padding-bottom: 80px; }
+#sjb ul li { width: 100%; height: 100%; float: none; margin-right: 0; margin-bottom: 20px; }
+#sjb u li:last-child { margin-bottom: 0; }
+#sjb ul li a .frame { width: 100%; height: 100%; }
+#sjb ul li a .frame img { width: 100%; height: 100%;  transition: none; }
+#sjb ul li a .frame:hover img { scale: 1; }
+#sjb ul li .frame { width: 100%; height: 100%; }
+#sjb ul li .frame img { width: 100%; height: 100%; transition: none; }
+#sjb ul li:hover .frame img { scale: 1; }
+#sjb ul li h3 { font-size: 24px; top: 40px; left: 40px; }
+#sjb ul li p { font-size: 14px;  bottom: 40px; left: 40px; width: 80%; }
+#sjb ul li:nth-child(2) p { bottom: 110px; }
+#sjb ul li .btb { width: 80%; font-size: 12px; }
+#sjb ul li a.bt { width: 45%; height: 50px; }
+#sjb ul li .btb a.bt:first-child { float: left; margin-right: 0; }
+#sjb ul li .btb a.bt:last-child { float: right; margin-right: 0; }
+
+#ct { padding-bottom: 80px; }
+#ct .tt h3 { margin-bottom: 30px; }
+#ct .ctbox { position: relative; }
+#ct article { height: 100%; width: 100%; margin-bottom: 20px; }
+#ct .guide { position: static; }
+#ct .sinteresting { position: static; }
+#ct article h4 { margin-bottom: 30px; display: inline-block; }
+#ct article b { color: #666; font-weight: normal; position: absolute; top: 76px; left: 30px; }
+#ct article a.go { position: static; }
+#ct article ul li { float: left; margin-right: 8%; width: 46%; }
+#ct article ul li:nth-child(2n) { margin-right: 0; }
+#ct article ul li a p { width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 100%; }
+#ct article ul li a h5 { margin: 10px 0; }
+#ct article.sinteresting { margin-bottom: 0; }
+#ct article.sinteresting h4 { margin-bottom: 30px; }
+#ct article.sinteresting img { margin-top: 0; margin-left: 0; margin: 0 auto; display: block; }
+
+
+/* know */  
+.stt strong { font-size: 16px; width: 85%; word-break: keep-all; display: block; }
+.stt h3 { font-size: 30px;  width: 70%; word-break: keep-all; }
+#kcom .hg { margin-top: 25px; }
+
+#kcom h4 { font-size: 16px; margin-left: 5px; margin-top: 20px; }
+#kcom article .ellipsis2 { width: 90%; }
+#kcom article>div { width: 100%; padding: 20px; }
+#kcom article.kcompaper { position: static; }
+#kcom article.kcompaper .ellipsis2 { width: 90%; }
+#kcom article.kcomcoll { position: static; }
+
+#algo ul li { float: none; margin-right: 0; margin-bottom: 10px;  }
+#algo .sbox { margin-top: 20px; width: 100%; box-sizing: border-box; }
+
+#find .more { position: absolute; right: 0; top: 80px; }
+
+#find .find1:hover .left a { opacity: 0; }
+#find .find1:hover .right a { opacity: 0; }
+#find .find1 ul li a .frame:hover:after { opacity: 0; }
+#find ul { margin-top: 50px; }
+#find ul li { float: left; width: 48%; margin-right: 4%; margin-bottom: 30px; }
+#find ul li:nth-child(2n) { margin-right: 0; }
+#find ul li h4 { margin-top: 30px; margin-bottom: 0; }
+#find ul li a .frame { width: 100%; height: 260px; transition: none; }
+#find ul li a .frame img { width: 100%; height: 260px; transition: none; }
+#find ul li a .frame img:hover, #com ul li a .frame img:focus { scale: 1; }
+#find ul li a:hover h4, #com ul li a:focus h4 { text-decoration: none; }
+#find ul li a.hg { margin-top: 10px; margin-right: 5px; transition: none; font-size: 13px; }
+#find ul li a .frame:hover img, #find ul li a .frame:focus img { scale: 1; }
+#find ul li a.hg:hover, #find ul li:focus a.hg { background: #999; }
+
+#road { height: 500px; }
+#road:after { content: ""; background: rgba(0,0,0,0) no-repeat center/cover; height: 0; width: 0; position: static; display: none; }
+#road .stt h3 {  padding-top: 50px; margin-top: 0; }
+#road article p { font-size: 18px; word-break: keep-all; }
+#road article span { font-size: 14px; word-break: keep-all; line-height: 1.6; }
+#road a { width: 180px; line-height: 50px; display: block; background: #0078fe; color: #fff; text-align: center; border-radius: 10px; font-size: 16px; font-weight: bold; margin-top: 40px; }
+
+#algocom { padding: 40px 0; }
+#algocom .more { position: absolute; right: 0; top: 60px; }
+#algocom ul li { width: 100%; height: 280px; margin-right: 0; float: none; transition: none; top: 0; } /* transition을 줘도 튄다 하면 초기점을 잡아주어야함. 이번엔 hover했을 때 top값을 움직였으므로 top값을 초기화해줘야함. */
+#algocom ul li:hover { box-shadow: none; position: relative; top: 0; }
+#algocom ul li a:hover h3 { text-decoration: none; }
+#algocom ul li a h3 { width: 100%; }
+#algocom ul li a:hover strong { text-decoration: none; }
+#algocom ul li a:hover p { text-decoration: none; }
+#algocom .hg:hover { background: #0078fe; text-decoration: none; }
+
+#popcom { padding-bottom: 40px; }
+#popcom .more { position: absolute; right: 0; top: 10px; }
+#popcom ul li { width: 100%; height: 280px; margin-right: 0; float: none; position: relative;transition: none; } /* transition을 줘도 튄다 하면 초기점을 잡아주어야함. 이번엔 hover했을 때 top값을 움직였으므로 top값을 초기화해줘야함. */
+#popcom ul li:hover { box-shadow: none; position: relative; top: 0; }
+#popcom ul li:nth-child(4n) { margin-right: 0; }
+#popcom ul li a:hover h3 { text-decoration: none; }
+#popcom ul li a h3 { width: 100%; }
+#popcom ul li a:hover strong { text-decoration: none; }
+#popcom ul li a:hover p { text-decoration: none; }
+
+#att { padding-bottom: 40px; }
+#att .swrap>.stt h3 { display: block; }
+#att .swrap>.stt .num { position: absolute; top: 80px; margin-left: 0; right: 0; }
+#att .more { position: absolute; right: 0; top: 40px; }
+#att ul { margin-top: 56px; }
+#att ul li { width: 100%; height: 280px; margin-right: 0; float: none; transition: none; }
+#att ul li:hover { box-shadow: none; top: 0; }
+#att ul li a:hover h3 { text-decoration: none; }
+#att ul li a h3 { width: 100%; margin-bottom: 20px; }
+#att ul li a strong { width: 100%; display: block; }
+#att ul li a:hover strong { text-decoration: none; }
+#att ul li a:hover p { text-decoration: none; }
+
+.pre { padding: 20px; margin: 40px 0 80px; }
+.pre h2 { font-size: 24px; color: #fff; }
+.pre p { font-size: 14px; line-height: 1.4; word-break: keep-all; }
+.pre a { width: 150px; line-height: 36px; font-size: 14px; }
+
+#osu { padding: 40px 0; }
+#osu .more { position: absolute; right: 0; top: 60px; }
+#osu ul li { width: 100%; height: 250px; margin-right: 0; float: none; transition: none; }
+#osu ul li:hover { box-shadow: none; position: relative; top: 0; }
+#osu ul li a:hover h3 { text-decoration: none; }
+#osu ul li a h3 { width: 100%; }
+#osu ul li a strong { width: 100%; }
+#osu ul li a:hover strong { text-decoration: none; }
+#osu ul li a p { width: 100%; }
+#osu ul li a:hover p { text-decoration: none; }
+
+#osu .planner { padding: 20px; margin-top: 80px; height: 450px; }
+#osu .planner:before { opacity: 1; }
+#osu .planner h2 { font-size: 24px; position: relative; }/* 이미지보다 위로 뜨게 하기 위해서 relative를 걸어줌 */
+#osu .planner p { font-size: 14px; margin: 20px 0 40px; position: relative; }
+#osu .planner .clgo { width: 45%; font-size: 13px; position: relative; }
+#osu .planner a:nth-of-type(2) { margin-left: 5%; }
+
+#kcoll .more { position: absolute; right: 0; top: 13px; }
+#kcoll .stt { margin-bottom: 32px; }
+#kcoll .kcollAr h4 { font-size: 20px; margin-top: 14px; margin-bottom: 6px; word-break: keep-all; }
+#kcoll .kcollAr .ellipsis2 { width: 100%; }
+#kcoll { padding: 40px 0 80px; }
+#kcoll .kcollAr { position: relative; }
+#kcoll .kgbox { width: 100%; height: 128px; position: absolute; }
+#kcoll .kwbox { width: 100%; height: 580px; }
+#kcoll .kcoll1 { width: 100%; position: relative; margin-bottom: 30px; }
+#kcoll .kcoll2 { position: relative; left: 0; margin-bottom: 30px; }
+#kcoll .kcoll3 { position: relative; left: 0; margin-bottom: 30px; }
+#kcoll .kcoll4 { position: relative; left: 0; }
+#kcoll .kwbox ul { position: absolute; left: 20px; top: 150px; width: 100%; }
+#kcoll .kwbox ul li { float: none; width: 100%; text-align: left; margin-right: 0; margin-bottom: 20px; }
+#kcoll .kwbox ul li a { display: flex; align-items: center; }
+#kcoll .kwbox ul li .frame { width: 90px; margin-right: 10%; }
+#kcoll .kwbox ul li .frame img { width: 90px; transition: none; }
+#kcoll .kwbox ul li:hover .frame img { scale: 1; }
+#kcoll .kwbox ul li:hover strong { text-decoration: none; }
+#kcoll .kwbox ul li strong.ellipsis2 { width: 50%; }
+#kcoll .kwbox .ssh { width: 90%; }
+
+
+/* sub - topic */
+.ttt h3 { font-size: 28px; }
+.ttt span { color: #0078fe; }
+.ttt strong { font-size: 15px; word-break: keep-all; }
+.tgbox .list a { width: 120px; }
+
+#tsj { margin-top: 70px; }
+#tsj .ttt a { font-size: 15px; margin: 30px 0 10px; }
+#tsj .ttt a i { font-size: 16px; margin-right: 5px; }
+#tsj .sjbox { height: 300px; padding: 10%; display: flex; flex-direction: column; margin-top: 30px; justify-content: center; align-items: center; }
+#tsj .sjbox h2 { font-size: 28px; margin-bottom: 10px; }
+#tsj .sjbox p { font-size: 14px; }
+#tsj .dmore { padding: 30px 0 0; }
+#tsj .dmore:hover span { text-decoration: none; }
+#tsj .dmore i:hover { opacity: 1; color: #fff; }
+
+#amal { padding: 40px 0 40px; }
+#amal .ttt strong { margin: 20px 0 40px; }
+#amal article { margin-top: 20px; }
+#amal .tk .tgbox { align-items: flex-start; }
+#amal .tk .tgbox .list { margin-right: 10px; }
+
+#ttd .ytd a { width: 47%; }
+#ttd .ytd a:first-child { margin-right: 2%; }
+#ttd .ttt { margin: 30px 0 40px; }
+#ttd .bbox a { width: 100%; float: none; }
+#ttd .twbox { width: 100%; padding: 100px 20px 20px; overflow: hidden; height: 560px; }
+#ttd .twbox:after { content: "사진을 확대/축소 해보세요"; width: 100%; line-height: 556px; display: block; background: rgba(0,0,0,0.8); color: #fff; position: absolute; left: 0; bottom: 0; text-align: center; font-size: 16px; }
+#ttd .twbox fieldset { border: none; justify-content: flex-end; position: absolute; top: 30px; right: 15px; }
+#tfind .more { position: absolute; right: 0; top: 50px; }
+#tfind .tfind1:hover .left a { opacity: 0; }
+#tfind .tfind1:hover .right a { opacity: 0; }
+#tfind .tfind1 ul li a .frame:hover:after { opacity: 0; }
+#tfind ul { margin-top: 50px; }
+#tfind ul li { float: left; width: 48%; margin-right: 4%; margin-bottom: 30px; }
+#tfind ul li:nth-child(2n) { margin-right: 0; }
+#tfind ul li h4 { margin-top: 30px; margin-bottom: 0; }
+#tfind ul li a .frame { width: 100%; height: 260px; transition: none; }
+#tfind ul li a .frame img { width: 100%; height: 260px; transition: none; }
+#tfind ul li a .frame img:hover, #com ul li a .frame img:focus { scale: 1; }
+#tfind ul li a:hover h4, #com ul li a:focus h4 { text-decoration: none; }
+#tfind ul li a.hg { margin-top: 10px; margin-right: 5px; transition: none; font-size: 13px; }
+#tfind ul li a .frame:hover img, #tfind ul li a .frame:focus img { scale: 1; }
+#tfind ul li a.hg:hover, #tfind ul li:focus a.hg { background: #999; }
+
+.tkcoll .more { position: absolute; right: 0; top: 50px; }
+#kcoll.tkcoll .kcoll1 { height: 320px; }
+#kcoll.tkcoll .kcoll1 .kwbox { height: 320px; }
+
+#uni { padding: 0 0 80px; }
+#uni .ttt strong { font-size: 18px; word-break: keep-all; }
+#uni .tuni:before { background: rgba(0,0,0,0.8); }
+#uni .tuni img { width: 100%; height: 750px; border-radius: 20px; }
+#uni .tuni .tuniment { position: absolute; top: 0; width: 100%; color: #fff; height: 100%; padding: 20px; box-sizing: border-box; word-break: keep-all; }
+#uni .tuni .tuniment p { margin-bottom: 40px; }
+#uni .tuni .tuniment ul li { font-size: 16px; word-break: keep-all; line-height: 1.8; }
+#uni .tuni .tuniment .start { margin: 40px 0 20px; transition: none; }
+#uni .tuni .tuniment .start:hover { text-align: center; background: #00bebe; color: #fff; border: 1px solid #00bebe; margin: 40px 0 20px; text-decoration: none; }
+#uni .tuni .tuniment .nomore{ text-decoration: underline; text-decoration-color: #fff; transition: none; }
+#uni .tuni .tuniment .nomore:hover { text-decoration: underline; text-decoration-color: #fff; color: #fff; }
+
+#login { background: #f9fbfc; padding: 40px 0 80px; }
+#login .loginbox { width: 94%; padding: 30px 10px; }
+#login .loginbox .logintop { margin: 20px 0 50px; }
+#login .loginbox .logintop li { width: 100%; font-size: 15px; color: #fff; margin: 6px 0; }
+#login .loginbox .logintop li a span { left: 16px; }
+#login .loginbox .logintop li:nth-child(1):before { width: 26px; height: 26px; left: 16px; top: 22px; }
+#login .loginbox .logintop li:nth-child(2):before { width: 24px; height: 24px; display: block; position: absolute; left: 14px; top: 23px; }
+#login .loginbox .logintop li:nth-child(3):before { width: 28px; height: 28px; display: block; position: absolute; left: 14px; top: 22px; }
+#login .loginbox .loginbottom { width: 100%; }
+#login .loginbox .loginbottom li { width: 46%; }
+#login .loginbox .loginbottom li:nth-child(1) { margin-right: 4%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media (min-width:801px) { /* pc */
+    .mob { display: none !important; }
+}
